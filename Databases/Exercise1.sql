@@ -1,6 +1,6 @@
-DROP DATABASE IF EXISTS Ejercicio1;
-CREATE DATABASE Ejercicio1;
-USE Ejercicio1;
+DROP DATABASE IF EXISTS University;
+CREATE DATABASE University;
+USE University;
 
 CREATE TABLE regions (
 	region_id INT (11) AUTO_INCREMENT PRIMARY KEY,
