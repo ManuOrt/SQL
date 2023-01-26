@@ -46,7 +46,8 @@ CREATE TABLE prestamo (
     fechaPrestamo DATE NOT NULL,
 
     PRIMARY KEY(usuarioID, ejemplarID),
-    FOREIGN KEY (usuarioID) REFERENCES usuario(usuarioID)
+    FOREIGN KEY (usuarioID) REFERENCES usuario(usuarioID),
+    FOREIGN KEY (ejemplarID) REFERENCES ejemplar(ejemplarID)
 );
 
 
