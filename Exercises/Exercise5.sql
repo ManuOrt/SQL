@@ -20,4 +20,4 @@ SELECT dept_name FROM department WHERE dept_name LIKE '_______%';
 
 -- 6) Find all the buildings that include a % symbol in their name.
 
-SELECT dept_name FROM department WHERE building = '/%';
+SELECT dept_name FROM department WHERE building LIKE '%\%%';
