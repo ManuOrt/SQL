@@ -3,7 +3,7 @@
 
 SELECT Frequents.pizzeria FROM Frequents, Person WHERE Person.age < 18 AND Frequents.name = Person.name;
 
--- 2) Find the names of all females who eat either mushroom or pepperoni pizza (or both). person y eats
+-- 2) Find the names of all females who eat either mushroom or pepperoni pizza (or both).
 
 SELECT DISTINCT Person.name FROM Person, Eats WHERE (Person.gender = "female" AND (Eats.pizza = "mushroom" OR Eats.pizza = "pepperoni")) AND Eats.name = Person.name;
 
@@ -15,11 +15,11 @@ INTERSECT
 
 (SELECT Person.name FROM Person, Eats WHERE (Person.gender = "female" AND (Eats.pizza = "pepperoni")) AND Eats.name = Person.name);
 
--- 4) Find all pizzerias that serve at least one pizza that Amy eats for less than $10.00.                    eats SERVES
+-- 4) Find all pizzerias that serve at least one pizza that Amy eats for less than $10.00.
 
 SELECT Serves.pizzeria FROM Eats, Serves WHERE (Serves.price < 10 AND Eats.name = "Amy") AND Eats.pizza = Serves.pizza;
 
--- 5) Find all pizzerias that are frequented by only females or only males.  Person ⨝ Frequents))
+-- 5) Find all pizzerias that are frequented by only females or only males.
 
 (SELECT Frequents.pizzeria FROM Person, Frequents WHERE Person.gender = "female" AND Person.name = Frequents.name
 
