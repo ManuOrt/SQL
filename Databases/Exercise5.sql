@@ -1,6 +1,6 @@
-DROP DATABASE IF EXISTS University;
-CREATE DATABASE University;
-USE University;
+DROP DATABASE IF EXISTS Exercise5;
+CREATE DATABASE Exercise5;
+USE Exercise5;
 
 create table classroom
      (building          varchar(15),
