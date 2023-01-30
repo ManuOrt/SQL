@@ -11,4 +11,4 @@ SELECT e2.supervisor FROM emp_super as e1, emp_super as e2. WHERE e1.person = "B
 
 -- 3) Compute the age.
 
-ALTER TABLE person ADD age AS DATEDIFF(YEAR, birthday, GETDATE());
+SELECT name, birthday, (DATE_FORMAT(NOW(), '%Y%m%d') - DATE_FORMAT(birthday, '%Y%m%d')) DIV 10000 AS age FROM person;

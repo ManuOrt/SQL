@@ -49,15 +49,25 @@ SELECT Person.name FROM Person
 
 EXCEPT
 
-(SELECT name, pizzeria FROM Frequents
+SELECT name FROM ((SELECT name, pizzeria FROM Frequents
 
 EXCEPT
 
-SELECT Eats.name, Serves.pizzeria FROM Eats, Serves WHERE Eats.pizza = Serves.pizza);
+SELECT Eats.name, Serves.pizzeria FROM Eats, Serves WHERE Eats.pizza = Serves.pizza)) AS temp_table;
+
+-- Es necesario el AS temp_table porque si no no funciona.
 
 -- 8) Find the names of all people who frequent every pizzeria serving at least one pizza they eat.
 
+SELECT Person.name FROM Person
 
+EXCEPT
+
+SELECT name FROM ((SELECT Eats.name, Serves.pizzeria FROM Eats, Serves WHERE Eats.pizza = Serves.pizza
+
+EXCEPT
+
+SELECT name, pizzeria FROM Frequents)) AS temp_table;
 
 -- 9) Find the pizzeria serving the cheapest pepperoni pizza. In the case of ties, return all of the cheapest-pepperoni pizzerias.
 
