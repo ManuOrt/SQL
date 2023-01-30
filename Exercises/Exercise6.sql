@@ -71,3 +71,4 @@ SELECT name, pizzeria FROM Frequents)) AS temp_table;
 
 -- 9) Find the pizzeria serving the cheapest pepperoni pizza. In the case of ties, return all of the cheapest-pepperoni pizzerias.
 
+SELECT pizzeria, pizza, price FROM Serves WHERE price IN (SELECT MIN(price) FROM Serves WHERE pizza = 'pepperoni') AND pizza = 'pepperoni';
