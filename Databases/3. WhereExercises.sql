@@ -1,6 +1,6 @@
-DROP DATABASE IF EXISTS Exercise3;
-CREATE DATABASE Exercise3;
-USE Exercise3;
+DROP DATABASE IF EXISTS WhereExercises;
+CREATE DATABASE WhereExercises;
+USE WhereExercises;
 
 CREATE TABLE employees (
     employee_number INT NOT NULL,

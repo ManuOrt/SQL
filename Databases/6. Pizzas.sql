@@ -1,6 +1,6 @@
-DROP DATABASE IF EXISTS Exercise6;
-CREATE DATABASE Exercise6;
-USE Exercise6;
+DROP DATABASE IF EXISTS Pizzas;
+CREATE DATABASE Pizzas;
+USE Pizzas;
 
 /* Delete the tables if they already exist */
 drop table if exists Person;

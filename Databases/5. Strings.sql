@@ -1,6 +1,6 @@
-DROP DATABASE IF EXISTS Exercise5;
-CREATE DATABASE Exercise5;
-USE Exercise5;
+DROP DATABASE IF EXISTS Strings;
+CREATE DATABASE Strings;
+USE Strings;
 
 create table classroom
      (building          varchar(15),

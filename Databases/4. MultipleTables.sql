@@ -1,6 +1,6 @@
-DROP DATABASE IF EXISTS Exercise4;
-CREATE DATABASE Exercise4;
-USE Exercise4;
+DROP DATABASE IF EXISTS MultipleTables;
+CREATE DATABASE MultipleTables;
+USE MultipleTables;
 
 
 CREATE TABLE regions (

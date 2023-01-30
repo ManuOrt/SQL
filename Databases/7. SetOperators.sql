@@ -1,6 +1,6 @@
-DROP DATABASE IF EXISTS Exercise7;
-CREATE DATABASE Exercise7;
-USE Exercise7;
+DROP DATABASE IF EXISTS SetOperators;
+CREATE DATABASE SetOperators;
+USE SetOperators;
 
 CREATE TABLE salesman(
     salesman_id INT PRIMARY KEY,
