@@ -1,6 +1,3 @@
-
--- Database: Exercise 1
-
 -- 1) Add a new column to the employees table which is called mentor_id. Optionally, change the table so that the mentor_id column references the employee_id column of the table employees.
 
 ALTER TABLE employees ADD mentor_id VARCHAR(20); 
