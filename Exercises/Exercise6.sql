@@ -43,13 +43,15 @@ EXCEPT
 
 (SELECT Frequents.name, Serves.pizza FROM Frequents, Serves WHERE Frequents.pizzeria = Serves.pizzeria);
 
-
 -- 7) Find the names of all people who frequent only pizzerias serving at least one pizza they eat.
 
+SELECT Person.name FROM Person
 
-(SELECT Frequents.name, Frequents.pizzeria FROM Frequents
+EXCEPT
 
-EXCEPT 
+(SELECT name, pizzeria FROM Frequents
+
+EXCEPT
 
 SELECT Eats.name, Serves.pizzeria FROM Eats, Serves WHERE Eats.pizza = Serves.pizza);
 
