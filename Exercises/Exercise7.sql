@@ -48,4 +48,10 @@ SELECT name, 'fail' AS result FROM student WHERE grade < 5;
 
 -- 7) Create a problem and (the solution) using set operators.
 
+-- Encuentra todas las ciudades en las que no hay un cliente o un vendedor implicado en un pedido.
 
+SELECT salesman.city FROM salesman, orders WHERE salesman.salesman_id = orders.salesman_id
+
+EXCEPT
+
+SELECT customer.city FROM customer, orders WHERE customer.customer_id = orders.customer_id;
