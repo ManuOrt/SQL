@@ -37,11 +37,21 @@ SELECT Frequents.pizzeria FROM Person, Frequents WHERE Person.gender = "female" 
 
 -- 6) For each person, find all pizzas the person eats that are not served by any pizzeria the person frequents. Return all such person (name) / pizza pairs.
 
+(SELECT Eats.name, Eats.pizza FROM Eats, Frequents WHERE Eats.name = Frequents.name)
+
+EXCEPT
+
+(SELECT Frequents.name, Serves.pizza FROM Frequents, Serves WHERE Frequents.pizzeria = Serves.pizzeria);
 
 
 -- 7) Find the names of all people who frequent only pizzerias serving at least one pizza they eat.
 
 
+(SELECT Frequents.name, Frequents.pizzeria FROM Frequents
+
+EXCEPT 
+
+SELECT Eats.name, Serves.pizzeria FROM Eats, Serves WHERE Eats.pizza = Serves.pizza);
 
 -- 8) Find the names of all people who frequent every pizzeria serving at least one pizza they eat.
 
